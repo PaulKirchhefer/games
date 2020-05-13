@@ -20,7 +20,7 @@ This program was only tested on Linux.
 ### Usage
 Even for small cost automata(for example 2 or 3 states, 2 letters, 2 counters) the limitedness computation may take a long time or fill the memory completely. Killing this program will **not** automatically kill 'autfilt' if it is currently running. You should keep track of the memory used by 'games'/'autfilt' and **save important data before usage of this program**. This especially applies to the computation of star heights.  
 
-The programs needs to write some auxiliary files and may write optional files. The directory(it must already exist) can be set using '-a=*path*'. Always specify paths using the file separator '/'.  
+The program needs to write some auxiliary files and may write optional files. The directory(it must already exist) can be set using '-a=*path*'. Always specify paths using the file separator '/'.  
 
 Some basic console commands:  
 h			- prints more detailed usage instructions  
