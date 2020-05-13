@@ -16,7 +16,7 @@ set 0 1 2 3 8
 %should be roughly ordered by difficulty
 %takes a long time
 
-%compute limitedness for modes 0 1 4 8 and STAMINA
+%compute limitedness for modes 0 1 2 3 8 and STAMINA
 %some(all?) modes are able to compute this within 60min
 testmlim ../CAs/shred/a2_shred1
 %store and reset stats
