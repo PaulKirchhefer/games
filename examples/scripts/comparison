@@ -1,0 +1,70 @@
+%generate some data to compare games approach with STAMINA
+%takes a long time
+-v=0
+-d=0
+-o=0
+-a=./output
+-l
+-k=60
+-s
+-c
+
+%show that the implementation can not compete with STAMINA
+
+set 0 1 2 3 8
+
+%should be roughly ordered by difficulty
+%takes a long time
+
+%compute limitedness for modes 0 1 4 8 and STAMINA
+%some(all?) modes are able to compute this within 60min
+testmlim ../CAs/shred/a2_shred1
+%store and reset stats
+stats ./output/sh_a2_stats
+
+%(likely) only STAMINA will compute results within 60min
+
+%limSTAM ../CAs/shred/a3_shred1
+testmlim ../CAs/shred/a3_shred1
+stats ./output/sh_a3_stats
+
+%limSTAM ../CAs/shred/a5_shred1
+testmlim ../CAs/shred/a5_shred1
+stats ./output/sh_a5_stats
+
+%limSTAM ../CAs/shred/abbaa2_shred1
+testmlim ../CAs/shred/abbaa2_shred1
+stats ./output/sh_abbaa2_stats
+
+%compute limitedness for all modes and STAMINA
+set
+
+%should be roughly ordered by difficulty
+%takes a long time, mostly due to modes SEQ ALT and TSETS
+
+do ./caex_x_20
+do ./caex_x_20
+do ./caex_x_20
+do ./caex_x_20
+do ./caex_x_20
+stats ./output/modes_caex_stats
+
+do ./fpred1_x_20
+do ./fpred1_x_20
+do ./fpred1_x_20
+do ./fpred1_x_20
+do ./fpred1_x_20
+stats ./output/modes_fp_abb_stats
+
+do ./fpred2_x_20
+do ./fpred2_x_20
+do ./fpred2_x_20
+do ./fpred2_x_20
+do ./fpred2_x_20
+stats ./output/modes_fp_abbaa2_stats
+
+testmlim ../CAs/shred/ab2_shred1
+stats ./output/modes_sh_ab2_stats
+
+testmlim ../CAs/shred/abb_shred1
+stats ./output/modes_sh_abb_stats

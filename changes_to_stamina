@@ -1,0 +1,4 @@
+CHANGES TO STAMINA SOURCE CODE:
+
+MultiCounterAut::coef_to_char(string coef, int NbCounters)
+	>Fixed likely bug by changing "return (NbCounters + c);" to "return (NbCounters + 1 + c);"

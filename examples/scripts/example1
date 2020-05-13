@@ -1,0 +1,51 @@
+%comment
+%write 'do <path to this file>' in the console to execute the following instruction
+
+%options will return to their previous value after finishing this file
+%some options(-v,-s,-c,..) can not be overriden if they were already set to a value (ie by typing '-v=0' in the console)
+
+%verbose console output
+-v
+%write auxiliary data and optional output to:
+-a=./output
+%print some statistics
+-s
+%compare results to STAMINA
+-c
+%kill SPOT/OINK after [minutes]. ONLY ON LINUX!
+-k=15
+%set game construction to: transition sequences, check transition order and check W1, both sinks are rejecting
+-g=4
+%type 'help' in the console for more options
+
+%you can define an automaton in this file using macros
+#1:
+2
+2
+ab
+0
+1
+
+a
+I1 I0
+_ _
+
+b
+_ _
+R0 _
+#
+
+%check the limitedness of the defined cost automaton
+lim #1
+
+%optionally, also compare to the expected result: 0 (not limited)
+lim #1 0
+
+%check the limitedness of some cost automaton in another file
+lim ../CAs/caex
+
+%compute the star height of some DFA
+sh ../DFAs/a2
+
+%check some DFA/NFA for the finite power property
+fp ../DFAs/a2

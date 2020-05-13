@@ -1,0 +1,26 @@
+%generate random automata and check if all modes/STAMINA compute the same result
+%takes some time
+-v
+-a=./output/check
+-k=5
+-c
+%writes automata that fail the test to file system
+-o
+
+%N0,N1,A0,A1,C0,C1,G,b
+%generate G cost automata for every combination of:
+%N0<=N<=N1
+%A0<=A<=A1
+%C0<=C<=C1
+%if b==1: compare for every mode
+%else: compare the current mode with STAMINA
+%G will also be used as the seed for RNG
+testLim 2 2 2 2 2 2 100 1
+
+%in the following tests only compare the following modes
+set 4 8
+testLim 3 3 2 2 2 2 5 1
+
+%N,A,C,G [,Seed]
+%generates and writes G cost automata, uses G as seed if none is provided
+%gen 3 2 2 10 1234235

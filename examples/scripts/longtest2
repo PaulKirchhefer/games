@@ -1,0 +1,22 @@
+%generate some data to compare games approach with STAMINA
+%takes a long time(~15h) and most likely wont succeed
+-v=0
+-d=0
+-o=0
+-a=./output
+-l
+-k=300
+-s
+-c
+
+-g = 4
+lim ../CAs/shred/a3_shred1
+stats ./output/long2_4_stats
+
+-g = 0
+lim ../CAs/shred/a3_shred1
+stats ./output/long2_0_stats
+
+-g = 8
+lim ../CAs/shred/a3_shred1
+stats ./output/long2_8_stats

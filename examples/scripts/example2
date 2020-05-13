@@ -1,0 +1,18 @@
+%compute some reductions(only the cost automata)
+%output is already computed in ../CAs/shred and ../CAs/fpred (renamed and commented)
+-v
+
+-a=./output
+
+%FinitePowerREDuctions
+redFP ../DFAs/abb
+redFP ../DFAs/abbaa2
+
+%StarHeightREDuctions(reduction implemented in STAMINA)
+redSTAM ../DFAs/a2
+redSTAM ../DFAs/a3
+redSTAM ../DFAs/a4
+redSTAM ../DFAs/a5
+redSTAM ../DFAs/ab2
+redSTAM ../DFAs/abb
+redSTAM ../DFAs/abbaa2

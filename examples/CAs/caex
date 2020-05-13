@@ -1,0 +1,15 @@
+%uses the input format of STAMINA
+%2 states, 2 counters, alphabet {a,b}, initial state '0', accepting states {1}
+2
+2
+ab
+0
+1
+
+a
+I1 I0
+_ _
+
+b
+_ _
+R0 _

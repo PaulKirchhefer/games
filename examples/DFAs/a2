@@ -1,0 +1,12 @@
+%uses the input format of STAMINA
+%2 states, automaton is a DFA/NFA, alphabet = {a}, initial state '0', accepting states {0}
+%L = (aa)*
+2
+c
+a
+0
+0
+
+a
+_ 1
+1 _
